@@ -17,8 +17,6 @@ type: menu
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 <!--   <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/animate.css" | prepend: site.baseurl }}"> -->
-  <script src="jquery-lettering.js"></script>
-  <script src="jquery-fittext.js"></script>
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 </head>

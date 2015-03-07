@@ -3,7 +3,9 @@
 
   {% include head.html %}
 
-  <body>
+
+
+  <body  >
 
     {% include header.html %}
 
@@ -15,6 +17,215 @@
 
     {% include footer.html %}
 
+
+  <script>
+
+  var mechain_cnt = 0;
+  var mechain_gray_div = window.document.getElementById("gray_div");
+  var mechain_blue_div = window.document.getElementById("blue_div");
+  var txtctr = window.document.getElementById("txtctr");
+
+  var li_g1 = window.document.getElementById("li_g1");
+  var li_g2 = window.document.getElementById("li_g2");
+  var li_g3 = window.document.getElementById("li_g3");
+  var li_b1 = window.document.getElementById("li_b1");
+  var li_b2 = window.document.getElementById("li_b2");
+  var li_b3 = window.document.getElementById("li_b3");
+  var li_b4 = window.document.getElementById("li_b4");
+  var li_b5 = window.document.getElementById("li_b5");
+
+
+
+  mechain_blue_div.style.display = "none";
+  mechain_gray_div.style.display = "none";
+
+
+  $('#gray_div').addClass('animated');
+  $('#blue_div').addClass('animated');
+
+  var step = 0;
+
+  function gray_disappear(mechain_gray_div)
+  {
+    mechain_gray_div.style.display = "none";
+  }
+
+  function mechain_rotate() {
+
+    step++;
+    //txtctr.value = step;
+
+    if (step == 1)
+    { 
+
+      li_g1.style.display = "block"; 
+      li_g2.style.display = "none";
+      li_g3.style.display = "none";
+      li_b2.style.display = "none";
+      li_b3.style.display = "none";
+      li_b4.style.display = "none";
+      li_b5.style.display = "none";
+
+      $('#gray_div').removeClass('bounceInRight');
+      $('#gray_div').removeClass('bounceOutLeft');
+      $('#blue_div').removeClass('fadeInRightBig');
+      $('#blue_div').removeClass('bounceInRight');
+
+      $('#li_g1').removeClass('animated fadeOut');
+      $('#li_g2').removeClass('animated fadeOut');
+      $('#li_g3').removeClass('animated fadeOut');
+      $('#li_b1').removeClass('animated fadeOut');
+      $('#li_b2').removeClass('animated fadeOut');
+      $('#li_b3').removeClass('animated fadeOut');
+      $('#li_b4').removeClass('animated fadeOut');
+      $('#li_b5').removeClass('animated fadeOut');
+
+      
+
+    }
+ 
+
+    if (step == 3)
+    {  
+     
+      li_g1.style.display = "block"; 
+      mechain_gray_div.style.display = "block"; 
+      $('#gray_div').addClass('bounceInRight');
+    }
+    
+
+    if ( step == 60   )
+    {
+      $('#li_g1').addClass('animated fadeOut');
+    }
+
+
+    if ( step == 65   )
+    {
+      li_g1.style.display = "none";
+      li_g2.style.display = "block";
+
+    }    
+ 
+    if ( step == 125   )
+    {
+      $('#li_g2').addClass('animated fadeOut');
+    } 
+
+
+    if ( step == 130   )
+    {
+      li_g2.style.display = "none";
+      li_g3.style.display = "block";
+    }  
+
+    // if (step == 180)
+    // {
+    //     $('#li_g3').addClass('animated fadeOut');
+    // }
+
+
+    if (step == 170)
+    {
+      $('#gray_div').removeClass('bounceInRight');
+      $('#gray_div').addClass('bounceOutLeft');
+    }
+
+    
+
+
+
+    if (step == 180)
+    {
+      mechain_gray_div.style.display = "none"; 
+      $('#gray_div').removeClass('bounceOutLeft');
+ 
+      mechain_blue_div.style.display = "block";  
+      $('#blue_div').addClass('bounceInRight');
+     li_b1.style.display = "block";
+    }
+
+
+    if ( step == 240   )
+    {
+      $('#li_b1').addClass('animated fadeOut');
+    }
+
+    if ( step == 250   )
+    {
+      li_b1.style.display = "none";
+      li_b2.style.display = "block";
+    }
+
+
+
+    if ( step == 310   )
+    {
+      $('#li_b2').addClass('animated fadeOut');
+    }
+
+
+
+    if ( step == 320   )
+    {
+      li_b2.style.display = "none";
+      li_b3.style.display = "block"; 
+    } 
+
+
+
+
+
+    if ( step == 360   )
+    {
+      $('#li_b3').addClass('animated fadeOut');
+    }
+                
+    if ( step == 370   )
+    {
+      li_b3.style.display = "none";       
+      li_b4.style.display = "block";
+    }
+
+
+
+    if ( step == 410   )
+    {
+      $('#li_b4').addClass('animated fadeOut');
+    }
+    if ( step == 420   )
+    {
+
+      li_b4.style.display = "none";
+      li_b5.style.display = "block"; 
+    } 
+
+  
+    if (step == 470)
+    {
+      $('#blue_div').removeClass('bounceInRight');
+      $('#blue_div').addClass('bounceOutLeft');
+    }
+    
+    if (step == 480)
+    {  
+      mechain_blue_div.style.display = "none"; 
+      $('#blue_div').removeClass('bounceOutLeft');
+      step = 0;
+    }   
+
+  }
+
+  var tid;
+
+  window.onload = function() {
+    tid = setInterval(mechain_rotate , 100);
+  }
+   
+ 
+
+
+  </script>
   </body>
 
 </html>

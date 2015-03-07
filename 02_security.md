@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Even Stronger Security
+title: Security Primer
 permalink: /measures/
 type: menu
 ---
