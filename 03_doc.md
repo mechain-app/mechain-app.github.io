@@ -1,6 +1,6 @@
 ---
 layout: page
-title: meChain Documentation
+title: Documentation
 permalink: /doc/
 type: menu
 ---
