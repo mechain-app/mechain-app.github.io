@@ -5,4 +5,4 @@ permalink: /measures/
 type: menu
 ---
 
-This is the Extra Security Measures page.
+This is the Security Primer page.

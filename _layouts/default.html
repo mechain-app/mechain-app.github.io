@@ -5,7 +5,7 @@
 
 
 
-  <body  >
+  <body style='' >
 
     {% include header.html %}
 
@@ -21,6 +21,9 @@
   <script>
 
   var mechain_cnt = 0;
+
+
+  var mechain_first_div = window.document.getElementById("first_div");
   var mechain_gray_div = window.document.getElementById("gray_div");
   var mechain_blue_div = window.document.getElementById("blue_div");
   var txtctr = window.document.getElementById("txtctr");
@@ -40,6 +43,10 @@
   mechain_gray_div.style.display = "none";
 
 
+
+  var pic3 = window.document.getElementById("pic3");
+
+
   $('#gray_div').addClass('animated');
   $('#blue_div').addClass('animated');
 
@@ -51,6 +58,7 @@
   }
 
   function mechain_rotate() {
+
 
     step++;
     //txtctr.value = step;
@@ -80,14 +88,12 @@
       $('#li_b4').removeClass('animated fadeOut');
       $('#li_b5').removeClass('animated fadeOut');
 
-      
-
     }
  
 
     if (step == 3)
     {  
-     
+     first_div.style.display = "none";
       li_g1.style.display = "block"; 
       mechain_gray_div.style.display = "block"; 
       $('#gray_div').addClass('bounceInRight');
@@ -211,6 +217,7 @@
     {  
       mechain_blue_div.style.display = "none"; 
       $('#blue_div').removeClass('bounceOutLeft');
+      first_div.style.display = "block";
       step = 0;
     }   
 
@@ -218,11 +225,15 @@
 
   var tid;
 
+
+
   window.onload = function() {
     tid = setInterval(mechain_rotate , 100);
   }
    
- 
+  pic3.height = pic3.height * 0.75
+  pic3.width = pic3.width * 0.75
+  $('#pic3').addClass('animated flipIn');
 
 
   </script>
