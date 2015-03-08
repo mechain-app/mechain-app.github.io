@@ -9,7 +9,7 @@
 
     {% include header.html %}
 
-    <div class="page-content">
+    <div class="page-content" style=''>
       <div class="wrapper">
         {{ content }}
       </div>
@@ -231,6 +231,7 @@
     tid = setInterval(mechain_rotate , 100);
   }
    
+
   pic3.height = pic3.height * 0.75
   pic3.width = pic3.width * 0.75
   $('#pic3').addClass('animated flipIn');
